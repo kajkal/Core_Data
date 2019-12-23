@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Core_Data" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="actions Stack View" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lGb-En-Nxc">
+                                <rect key="frame" x="24" y="68" width="366" height="269"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ld-dw-BLP">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="67"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.10000000000000001"/>
+                                        <state key="normal" title="Generate data"/>
+                                        <connections>
+                                            <action selector="generateData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O8d-RD-Gtd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQL-tu-u5s">
+                                        <rect key="frame" x="0.0" y="67" width="366" height="67.5"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.10000000000000001"/>
+                                        <state key="normal" title="Query min max time"/>
+                                        <connections>
+                                            <action selector="queryMinMaxTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DkR-nt-xNp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pT3-e0-ajK">
+                                        <rect key="frame" x="0.0" y="134.5" width="366" height="67"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.10000000000000001"/>
+                                        <state key="normal" title="Query average value"/>
+                                        <connections>
+                                            <action selector="queryAverageValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4G-DG-Rhu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1z3-EZ-nq8">
+                                        <rect key="frame" x="0.0" y="201.5" width="366" height="67.5"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.10000000000000001"/>
+                                        <state key="normal" title="Query sensor average value"/>
+                                        <connections>
+                                            <action selector="querySensorAverageValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Lx-4E-gaj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xQv-eq-z4o">
+                                <rect key="frame" x="24" y="361" width="366" height="477"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgb-lH-U3u">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="47.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.10000000000000001"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMm-V6-WZL">
+                                        <rect key="frame" x="0.0" y="47.5" width="366" height="429.5"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rgb-lH-U3u" firstAttribute="height" secondItem="xQv-eq-z4o" secondAttribute="height" multiplier="0.1" id="ZvY-ah-tQf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lGb-En-Nxc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="1Ie-Ax-qxx"/>
+                            <constraint firstItem="xQv-eq-z4o" firstAttribute="top" secondItem="lGb-En-Nxc" secondAttribute="bottom" constant="24" id="8s1-m4-ai4"/>
+                            <constraint firstItem="xQv-eq-z4o" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-24" id="8uS-Gc-6Wz"/>
+                            <constraint firstItem="xQv-eq-z4o" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-24" id="FV6-U4-Unk"/>
+                            <constraint firstItem="lGb-En-Nxc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-24" id="eRh-o5-HJQ"/>
+                            <constraint firstItem="lGb-En-Nxc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="hf1-Jm-Mmx"/>
+                            <constraint firstItem="lGb-En-Nxc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="ngq-7H-ICz"/>
+                            <constraint firstItem="xQv-eq-z4o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="twO-HE-bbJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="resultsLbl" destination="nMm-V6-WZL" id="7ql-5L-gec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="139"/>
         </scene>
     </scenes>
 </document>
