@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8640E88423B13DF5005FE7F4 /* Sensor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8640E88023B13DF5005FE7F4 /* Sensor+CoreDataClass.swift */; };
+		8640E88523B13DF5005FE7F4 /* Sensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8640E88123B13DF5005FE7F4 /* Sensor+CoreDataProperties.swift */; };
+		8640E88623B13DF5005FE7F4 /* Reading+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8640E88223B13DF5005FE7F4 /* Reading+CoreDataClass.swift */; };
+		8640E88723B13DF5005FE7F4 /* Reading+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8640E88323B13DF5005FE7F4 /* Reading+CoreDataProperties.swift */; };
 		8659814A23B05E4100DBE773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659814923B05E4100DBE773 /* AppDelegate.swift */; };
 		8659814C23B05E4100DBE773 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659814B23B05E4100DBE773 /* SceneDelegate.swift */; };
 		8659814E23B05E4100DBE773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659814D23B05E4100DBE773 /* ViewController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8640E88023B13DF5005FE7F4 /* Sensor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		8640E88123B13DF5005FE7F4 /* Sensor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		8640E88223B13DF5005FE7F4 /* Reading+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reading+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		8640E88323B13DF5005FE7F4 /* Reading+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reading+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		8659814623B05E4100DBE773 /* Core_Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Core_Data.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8659814923B05E4100DBE773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8659814B23B05E4100DBE773 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8640E87F23B13DC1005FE7F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8640E88023B13DF5005FE7F4 /* Sensor+CoreDataClass.swift */,
+				8640E88123B13DF5005FE7F4 /* Sensor+CoreDataProperties.swift */,
+				8640E88223B13DF5005FE7F4 /* Reading+CoreDataClass.swift */,
+				8640E88323B13DF5005FE7F4 /* Reading+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8659813D23B05E4100DBE773 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				8659816023B0634900DBE773 /* Utils */,
+				8640E87F23B13DC1005FE7F4 /* Models */,
 				8659814923B05E4100DBE773 /* AppDelegate.swift */,
 				8659814B23B05E4100DBE773 /* SceneDelegate.swift */,
 				8659814D23B05E4100DBE773 /* ViewController.swift */,
@@ -159,8 +179,12 @@
 				8659816523B063C100DBE773 /* DataManager.swift in Sources */,
 				8659815423B05E4100DBE773 /* Core_Data.xcdatamodeld in Sources */,
 				8659814E23B05E4100DBE773 /* ViewController.swift in Sources */,
+				8640E88623B13DF5005FE7F4 /* Reading+CoreDataClass.swift in Sources */,
 				8659814A23B05E4100DBE773 /* AppDelegate.swift in Sources */,
+				8640E88723B13DF5005FE7F4 /* Reading+CoreDataProperties.swift in Sources */,
 				8659814C23B05E4100DBE773 /* SceneDelegate.swift in Sources */,
+				8640E88423B13DF5005FE7F4 /* Sensor+CoreDataClass.swift in Sources */,
+				8640E88523B13DF5005FE7F4 /* Sensor+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

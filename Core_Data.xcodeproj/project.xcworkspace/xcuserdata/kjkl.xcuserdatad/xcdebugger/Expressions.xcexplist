@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DataManager.getAverageReadingValueGroupedBySensor():DataManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dict[&quot;avg&quot;] as? Double">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.queryMinMaxTime(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "data.readings[0].value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataManager.getMinAndMaxTimestamps():DataManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "result[0] as? [String: Int]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
